@@ -1,0 +1,50 @@
+{
+  "name": "vite-boilerplate",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+
+    "test:types": "tsc --pretty --noEmit",
+    "test:format": "prettier --check ./src/**",
+    "test:lint": "eslint ./src/** --ext ts --ext tsx --ext js",
+    "format": "prettier --write .",
+    "test-all": "npm run check-format && npm run check-lint && npm run check-types",
+
+    "gen:theme-typings": "chakra-cli tokens src/theme/index.ts",
+
+    "prepare": "husky install",
+    "postinstall": "yarn gen:theme-typings",
+    "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.2.1",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^6",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@chakra-ui/cli": "^2.1.0",
+    "@trivago/prettier-plugin-sort-imports": "^3.2.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "eslint": "^8.18.0",
+    "eslint-config-next": "^12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9"
+  }
+}
