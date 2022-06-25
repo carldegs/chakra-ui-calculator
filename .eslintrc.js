@@ -16,9 +16,8 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
-    'next',
-    'next/core-web-vitals',
   ],
+  ignorePatterns: ['*.svg'],
   rules: {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/prop-types': 'off',

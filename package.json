@@ -6,15 +6,12 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-
     "test:types": "tsc --pretty --noEmit",
     "test:format": "prettier --check ./src/**",
     "test:lint": "eslint ./src/** --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
     "test-all": "npm run check-format && npm run check-lint && npm run check-types",
-
     "gen:theme-typings": "chakra-cli tokens src/theme/index.ts",
-
     "prepare": "husky install",
     "postinstall": "yarn gen:theme-typings",
     "clean": "rm -rf ./dist && rm -rf tsconfig.tsbuildinfo"
@@ -24,6 +21,7 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "framer-motion": "^6",
+    "phosphor-react": "^1.4.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -36,7 +34,6 @@
     "@typescript-eslint/parser": "^5.28.0",
     "@vitejs/plugin-react": "^1.3.0",
     "eslint": "^8.18.0",
-    "eslint-config-next": "^12.1.6",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
@@ -45,6 +42,7 @@
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
     "typescript": "^4.6.3",
-    "vite": "^2.9.9"
+    "vite": "^2.9.9",
+    "vite-plugin-pwa": "^0.12.0"
   }
 }
